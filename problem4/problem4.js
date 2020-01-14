@@ -20,7 +20,6 @@ function largestPalindromeProduct(n) {
   }
 
   // Good luck!
-  console.log(highestPalindrome);
   return highestPalindrome;
 }
 

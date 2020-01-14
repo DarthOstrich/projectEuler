@@ -1,17 +1,13 @@
 function largestPrimeFactor(number) {
-  // let factors = [];
   let primesAndFactor = [];
   // find all factors
   // In order to maintain this property of unique prime factorizations, it is necessary that the number one, 1, be categorized as neither prime nor composite.
-  // console.time("factorIterator loop")
   for (let factorIterator = 0; factorIterator <= number; factorIterator++) {
     // check if factor
     let isFactor = number % factorIterator == 0;
     let isPrime = true;
 
     if (isFactor) {
-      // factors.push(factorIterator);
-
       // see if factor is a prime
       // a prime number has two factors, 1 and itself
       for (let i = 2; i < factorIterator; i++) {
