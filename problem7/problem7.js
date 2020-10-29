@@ -1,6 +1,5 @@
 const { performance } = require("perf_hooks");
 function isPrime(num) {
-  const isPrime = true;
   for (let i = 2; i < num; i++) {
     if (num % i == 0) {
       return false;
@@ -60,24 +59,23 @@ function generatePrimes(limit) {
 }
 
 function isPrimeNum(num) {
-  // if (num % 2 === 0 || num % 3 === 0) {
-  //   return true;
-  // }
-  // const isPrime = true;
-  // for (let i = 2; i < num; i++) {
-  //   if (num % i == 0) {
-  //     return false;
-  //   }
-  // }
-  // return true;
-
-  var i = 5;
-  while (i <= Math.ceil(Math.sqrt(num))) {
-    if (num % i === 0) return false;
-    if (num % (i + 2) === 0) return false;
-    i += 6;
+  if (num % 2 === 0 || num % 3 === 0) {
+    return true;
+  }
+  for (let i = 2; i <= Math.ceil(Math.sqrt(num)); i++) {
+    if (num % i == 0) {
+      return false;
+    }
   }
   return true;
+
+  // var i = 5;
+  // while (i <= Math.ceil(Math.sqrt(num))) {
+  //   if (num % i === 0) return false;
+  //   if (num % (i + 2) === 0) return false;
+  //   i += 6;
+  // }
+  // return true;
 }
 
 function nthPrime(n) {
