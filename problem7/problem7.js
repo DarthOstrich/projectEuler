@@ -85,7 +85,7 @@ function nthPrime(n) {
   //     filteredPrimes.push(item)
   //   }
   // }
-  primes.sort(function(a, b) {
+  primes.sort(function (a, b) {
     return a - b;
   });
   const answer = primes[n - 1];
