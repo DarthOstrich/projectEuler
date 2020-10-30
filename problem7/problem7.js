@@ -1,4 +1,5 @@
 const { performance } = require("perf_hooks");
+
 function isPrime(num) {
   for (let i = 2; i < num; i++) {
     if (num % i == 0) {
@@ -85,7 +86,7 @@ function nthPrime(n) {
   //     filteredPrimes.push(item)
   //   }
   // }
-  primes.sort(function (a, b) {
+  primes.sort(function(a, b) {
     return a - b;
   });
   const answer = primes[n - 1];
